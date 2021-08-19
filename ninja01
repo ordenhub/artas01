@@ -1,0 +1,98 @@
+local players = game:GetService("Players");
+local runService = game:GetService("RunService");
+local localPlayer = players.LocalPlayer;
+local mouse = localPlayer:GetMouse();
+local dot = Vector3.new().Dot;
+local speed = 245; --dont change
+local err = 1.0E-10;
+local camera = workspace.CurrentCamera;
+local isHolding = false; do
+   local userInputService = game:GetService("UserInputService");
+   userInputService.InputBegan:Connect(function(key, gp)
+       if gp then return; end
+       if key.UserInputType == Enum.UserInputType.MouseButton2 then
+           isHolding = true;
+       end
+   end);
+   userInputService.InputEnded:Connect(function(key, gp)
+       if gp then return; end
+       if key.UserInputType == Enum.UserInputType.MouseButton2 then
+           isHolding = false;
+       end
+   end);
+end
+
+local function solveQuadratic(a, b, c)
+   if a > -err and a < err then
+       return -b / a;
+   end
+   local k = -b / (2 * a);
+   local d = k * k - c / a;
+   if d > -err and d < err then
+       return;
+   else
+       local u = d ^ 0.5;
+       return k + u, k - u;
+   end
+end
+--https://playtechs.blogspot.com/2007/04/aiming-at-moving-target.html
+local function trajectoryWithoutGravity(origin, target, movingVelocity, projectileSpeed)
+   local p = target - origin;
+   local c0 = dot(movingVelocity, movingVelocity) - projectileSpeed * projectileSpeed;
+   local c1 = 2 * dot(p, movingVelocity);
+   local c2 = dot(p, p);
+   local t0, t1 = solveQuadratic(c0, c1, c2);
+   if t0 and t0 > 0 then
+       return -origin + t0 * movingVelocity + target;
+   end
+   if t1 and t1 > 0 then
+       return -origin + t1 * movingVelocity + target;
+   end
+end
+
+runService.RenderStepped:Connect(function()
+   local max, close = 1 / 0;
+   local plrs = players:GetPlayers();
+   for i = 1, #plrs do
+       local plr = plrs[i];
+       if plr ~= localPlayer then
+           local theirChar = plr.Character;
+           local myChar = localPlayer.Character;
+           if theirChar and myChar then
+               local head = theirChar:FindFirstChild("Head");
+               if head then
+                   local pos, onScreen = camera:WorldToScreenPoint(head.Position);
+                   if onScreen then
+                       local dist = Vector2.new(pos.X - mouse.Y, pos.Y - mouse.Y).Magnitude;
+                       if dist < max then
+                           max = dist;
+                           close = plr;
+                       end
+                   end
+               end
+           end
+       end
+   end
+   if close then
+       local character = localPlayer.Character;
+       local theirCharacter = close.Character;
+       local torso = character and character:FindFirstChild("Torso");
+       local tool = character and character:FindFirstChildOfClass("Tool");
+       if character and theirCharacter and torso and tool and isHolding then
+           local head = theirCharacter:FindFirstChild("Head");
+           local hrp = theirCharacter:FindFirstChild("HumanoidRootPart");
+           if head and hrp then
+               local origin = CFrame.new(torso.CFrame * Vector3.new(0, 1, -1));
+               origin = CFrame.lookAt(origin.Position, head.Position) * CFrame.new(0, 0, 1);
+               local v = trajectoryWithoutGravity(origin.Position, head.Position, hrp.Velocity, speed);
+               if v then
+                   --[[local hitAnything = workspace:FindPartOnRayWithIgnoreList(Ray.new(camera.CFrame.Position, v), {localPlayer.Character, camera});
+                   if hitAnything then
+                       return;
+                   end]]
+                   camera.CFrame = CFrame.lookAt(camera.CFrame.Position, camera.CFrame.Position + v);
+               end
+           end
+       end
+   end
+end);
