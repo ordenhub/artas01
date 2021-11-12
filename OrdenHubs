@@ -1,0 +1,369 @@
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Yaznal = Instance.new("Frame")
+local Header = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Universal = Instance.new("TextButton")
+local blox = Instance.new("TextButton")
+local Dog = Instance.new("TextButton")
+local Dungeon = Instance.new("TextButton")
+local BigPaintball = Instance.new("TextButton")
+local Lumber = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local cross = Instance.new("ImageButton")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local KeyWin = Instance.new("Frame")
+local keylave = Instance.new("TextLabel")
+local key = Instance.new("TextBox")
+local check = Instance.new("TextButton")
+local getkey = Instance.new("TextButton")
+local Frame3 = Instance.new("TextLabel")
+local closer = Instance.new("ImageButton")
+local closer_2 = Instance.new("ImageButton")
+local Frame_4 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Yaznal.Name = "Yaznal"
+Yaznal.Parent = ScreenGui
+Yaznal.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Yaznal.Position = UDim2.new(0.267670929, 0, 0.262658238, 0)
+Yaznal.Size = UDim2.new(0, 400, 0, 300)
+Yaznal.Visible = false
+
+Header.Name = "Header"
+Header.Parent = Yaznal
+Header.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Header.Size = UDim2.new(0, 400, 0, 25)
+
+TextLabel.Parent = Yaznal
+TextLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel.Position = UDim2.new(0, 0, -0.000675099669, 0)
+TextLabel.Size = UDim2.new(0, 400, 0, 25)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Orden Hub"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+
+ScrollingFrame.Parent = Yaznal
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScrollingFrame.Position = UDim2.new(0.0176158901, 0, 0.114721067, 0)
+ScrollingFrame.Size = UDim2.new(0, 386, 0, 255)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 6, 0)
+ScrollingFrame.ScrollBarThickness = 10
+
+Universal.Name = "Universal"
+Universal.Parent = ScrollingFrame
+Universal.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+Universal.Position = UDim2.new(0.0336787552, 0, 0.00535947829, 0)
+Universal.Size = UDim2.new(0, 165, 0, 50)
+Universal.Font = Enum.Font.GothamSemibold
+Universal.Text = "Universal Aimbot & ESP"
+Universal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Universal.TextScaled = true
+Universal.TextSize = 14.000
+Universal.TextWrapped = true
+Universal.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
+end)
+
+
+blox.Name = "blox"
+blox.Parent = ScrollingFrame
+blox.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+blox.Position = UDim2.new(0.520511687, 0, 0.00535947829, 0)
+blox.Size = UDim2.new(0, 165, 0, 50)
+blox.Font = Enum.Font.GothamSemibold
+blox.Text = "Blox Fruit"
+blox.TextColor3 = Color3.fromRGB(0, 0, 0)
+blox.TextScaled = true
+blox.TextSize = 14.000
+blox.TextWrapped = true
+blox.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/8HcGyHhh'))()
+end)
+
+Dog.Name = "Dog"
+Dog.Parent = ScrollingFrame
+Dog.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+Dog.BorderSizePixel = 3
+Dog.Position = UDim2.new(0.0336787552, 0, 0.0398039222, 0)
+Dog.Size = UDim2.new(0, 165, 0, 50)
+Dog.Font = Enum.Font.GothamSemibold
+Dog.Text = "Dog Piece"
+Dog.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dog.TextScaled = true
+Dog.TextSize = 14.000
+Dog.TextWrapped = true
+
+Dungeon.Name = "Dungeon"
+Dungeon.Parent = ScrollingFrame
+Dungeon.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+Dungeon.Position = UDim2.new(0.520511687, 0, 0.0398039222, 0)
+Dungeon.Size = UDim2.new(0, 165, 0, 50)
+Dungeon.Font = Enum.Font.GothamSemibold
+Dungeon.Text = "Dungeon Quest"
+Dungeon.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dungeon.TextScaled = true
+Dungeon.TextSize = 14.000
+Dungeon.TextWrapped = true
+Dungeon.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Solx69/Shit-Boy-Hub-Main/main/Master.lua'))()
+end)
+
+
+BigPaintball.Name = "Big Paintball"
+BigPaintball.Parent = ScrollingFrame
+BigPaintball.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+BigPaintball.Position = UDim2.new(0.0336787552, 0, 0.0748039261, 0)
+BigPaintball.Size = UDim2.new(0, 165, 0, 50)
+BigPaintball.Font = Enum.Font.GothamSemibold
+BigPaintball.Text = "Big Paintball Script (TR1V5)"
+BigPaintball.TextColor3 = Color3.fromRGB(0, 0, 0)
+BigPaintball.TextScaled = true
+BigPaintball.TextSize = 14.000
+BigPaintball.TextWrapped = true
+BigPaintball.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/8p3pjyyD'))()
+end)
+
+Lumber.Name = "Lumber"
+Lumber.Parent = ScrollingFrame
+Lumber.BackgroundColor3 = Color3.fromRGB(255, 237, 238)
+Lumber.Position = UDim2.new(0.520511687, 0, 0.0748039261, 0)
+Lumber.Size = UDim2.new(0, 165, 0, 50)
+Lumber.Font = Enum.Font.GothamSemibold
+Lumber.Text = "Lumber tycoon 2"
+Lumber.TextColor3 = Color3.fromRGB(0, 0, 0)
+Lumber.TextScaled = true
+Lumber.TextSize = 14.000
+Lumber.TextWrapped = true
+Lumber.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync'https://cdn.applebee1558.com/bark/bark.lua')('bark > blood :)')
+end)
+
+Frame.Parent = Yaznal
+Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Frame.Position = UDim2.new(0, 0, 1, 0)
+Frame.Size = UDim2.new(0, 400, 0, 31)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextLabel_2.Size = UDim2.new(0, 400, 0, 31)
+TextLabel_2.Font = Enum.Font.GothamSemibold
+TextLabel_2.Text = "Press RightAlt to toggle the GUI"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextWrapped = true
+
+cross.Name = "cross"
+cross.Parent = Yaznal
+cross.BackgroundTransparency = 1.000
+cross.Position = UDim2.new(0.964999974, 0, -0.0399999991, 0)
+cross.Size = UDim2.new(0, 24, 0, 23)
+cross.ZIndex = 2
+cross.Image = "rbxassetid://6764432408"
+cross.ImageRectOffset = Vector2.new(200, 600)
+cross.ImageRectSize = Vector2.new(50, 50)
+
+Frame_2.Parent = Yaznal
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0.0175000019, 0, 0.0366666652, 0)
+Frame_2.Size = UDim2.new(0, 119, 0, 2)
+
+Frame_3.Parent = Yaznal
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.Position = UDim2.new(0.682500005, 0, 0.0366666652, 0)
+Frame_3.Size = UDim2.new(0, 119, 0, 2)
+
+KeyWin.Name = "KeyWin"
+KeyWin.Parent = ScreenGui
+KeyWin.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+KeyWin.BorderSizePixel = 5
+KeyWin.Position = UDim2.new(0.324855506, 0, 0.341772169, 0)
+KeyWin.Size = UDim2.new(0, 300, 0, 200)
+
+keylave.Name = "keylave"
+keylave.Parent = KeyWin
+keylave.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+keylave.BorderSizePixel = 5
+keylave.Position = UDim2.new(0, 0, -0.170000002, 0)
+keylave.Size = UDim2.new(0, 300, 0, 34)
+keylave.Font = Enum.Font.SourceSans
+keylave.Text = "Key Pass"
+keylave.TextColor3 = Color3.fromRGB(255, 255, 255)
+keylave.TextScaled = true
+keylave.TextSize = 14.000
+keylave.TextWrapped = true
+
+key.Name = "key"
+key.Parent = KeyWin
+key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key.BorderSizePixel = 3
+key.Position = UDim2.new(0.0500000007, 0, 0.104999997, 0)
+key.Size = UDim2.new(0, 268, 0, 34)
+key.Font = Enum.Font.SourceSans
+key.Text = ""
+key.TextColor3 = Color3.fromRGB(83, 83, 83)
+key.TextSize = 20.000
+
+check.Name = "check"
+check.Parent = KeyWin
+check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+check.BorderSizePixel = 3
+check.Position = UDim2.new(0.0500000007, 0, 0.540000021, 0)
+check.Size = UDim2.new(0, 268, 0, 31)
+check.Font = Enum.Font.GothamSemibold
+check.Text = "Check Key"
+check.TextColor3 = Color3.fromRGB(0, 0, 0)
+check.TextSize = 14.000
+
+getkey.Name = "getkey"
+getkey.Parent = KeyWin
+getkey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+getkey.BorderSizePixel = 3
+getkey.Position = UDim2.new(0.0500000007, 0, 0.785702527, 0)
+getkey.Size = UDim2.new(0, 268, 0, 31)
+getkey.Font = Enum.Font.GothamSemibold
+getkey.Text = "Get Key"
+getkey.TextColor3 = Color3.fromRGB(0, 0, 0)
+getkey.TextSize = 14.000
+
+Frame3.Name = "Frame3"
+Frame3.Parent = KeyWin
+Frame3.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Frame3.BorderSizePixel = 5
+Frame3.Position = UDim2.new(0, 0, 1.1379745, 0)
+Frame3.Size = UDim2.new(0, 300, 0, 78)
+Frame3.Visible = false
+Frame3.Font = Enum.Font.SourceSans
+Frame3.Text = "The link to get the key has been copied! Paste it into the search bar of the browser"
+Frame3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Frame3.TextScaled = true
+Frame3.TextSize = 17.000
+Frame3.TextWrapped = true
+
+closer.Name = "closer"
+closer.Parent = Frame3
+closer.BackgroundTransparency = 1.000
+closer.Position = UDim2.new(0.969999969, 0, -0.211538434, 0)
+closer.Size = UDim2.new(0, 25, 0, 25)
+closer.ZIndex = 2
+closer.Image = "rbxassetid://3926305904"
+closer.ImageRectOffset = Vector2.new(924, 724)
+closer.ImageRectSize = Vector2.new(36, 36)
+
+closer_2.Name = "closer"
+closer_2.Parent = KeyWin
+closer_2.BackgroundTransparency = 1.000
+closer_2.Position = UDim2.new(0.969999969, 0, -0.24999997, 0)
+closer_2.Size = UDim2.new(0, 25, 0, 25)
+closer_2.ZIndex = 2
+closer_2.Image = "rbxassetid://3926305904"
+closer_2.ImageRectOffset = Vector2.new(924, 724)
+closer_2.ImageRectSize = Vector2.new(36, 36)
+
+Frame_4.Parent = KeyWin
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.Position = UDim2.new(-0.00333333341, 0, 0.400000006, 0)
+Frame_4.Size = UDim2.new(0, 301, 0, 2)
+
+-- Scripts:
+
+local function DPEEV_fake_script() -- Yaznal.LocalScript 
+	local script = Instance.new('LocalScript', Yaznal)
+
+	Yaznal.Active = true
+	Yaznal.Draggable = true
+end
+coroutine.wrap(DPEEV_fake_script)()
+local function SFYK_fake_script() -- cross.LocalScript 
+	local script = Instance.new('LocalScript', cross)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(SFYK_fake_script)()
+local function LFDQN_fake_script() -- Yaznal.LocalScript 
+	local script = Instance.new('LocalScript', Yaznal)
+
+	function onKeyPress(inputObject, gameProcessedEvent)
+		if inputObject.KeyCode == Enum.KeyCode.RightAlt then
+			if Yaznal.Visible == false then
+				Yaznal.Visible = true
+			else
+				Yaznal.Visible = false
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+end
+coroutine.wrap(LFDQN_fake_script)()
+local function LOYP_fake_script() -- check.LocalScript 
+	local script = Instance.new('LocalScript', check)
+
+	local key = script.Parent.Parent.key
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if key.Text == "Budsfimrofgsdu3" then -- Make the "Key" whatever you wish.
+			script.Parent.Parent:TweenPosition(UDim2.new(0.383,0,-0.9,0), "Out", "Quad", 1, true)
+			script.Parent.Parent.Parent.Yaznal.Visible = true
+			wait(5)
+			script.Parent.Parent:Destroy() -- Destroys the GUI after a set time
+			print("Destroyed!")
+		elseif -- Tweening | If you want it to do a different tween just change the "Quad" to another tween animation
+			key.Text == "" then
+			key.Text = "" else
+			key.Text = "Incorrect, try again."
+			wait(1)
+			key.Text = ""
+		end
+	end)
+end
+coroutine.wrap(LOYP_fake_script)()
+local function BKEX_fake_script() -- KeyWin.LocalScript 
+	local script = Instance.new('LocalScript', KeyWin)
+
+	KeyWin.Active = true
+	KeyWin.Draggable = true
+end
+coroutine.wrap(BKEX_fake_script)()
+local function OAXZD_fake_script() -- getkey.LocalScript 
+	local script = Instance.new('LocalScript', getkey)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Frame3.Visible = true
+	end)
+end
+coroutine.wrap(OAXZD_fake_script)()
+local function VFFIQ_fake_script() -- getkey.LocalScript 
+	local script = Instance.new('LocalScript', getkey)
+
+	setclipboard("https://best-downloader.site/er/getkey.html")
+end
+coroutine.wrap(VFFIQ_fake_script)()
+local function LPPXKNR_fake_script() -- closer.LocalScript 
+	local script = Instance.new('LocalScript', closer)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(LPPXKNR_fake_script)()
+local function XGTN_fake_script() -- closer_2.LocalScript 
+	local script = Instance.new('LocalScript', closer_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(XGTN_fake_script)()
