@@ -87,7 +87,7 @@ blox.TextScaled = true
 blox.TextSize = 14.000
 blox.TextWrapped = true
 blox.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet('https://pastebin.com/raw/8HcGyHhh'))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NightsTimeZ/Night_Script/main/BloxFruit.lua"))()
 end)
 
 Dog.Name = "Dog"
