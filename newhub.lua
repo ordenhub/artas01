@@ -94,11 +94,11 @@ local function ZBYZ_fake_script() -- Load.LocalScript
 		end
 	end
 	
-	if game.PlaceId == 606849621 then
+	if game.PlaceId == 815405518 then
 		script.Parent.Parent.TextLabel.Text = "Jailbreak"
 		wait(2)
 		script.Parent.Parent.Parent:Destroy()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/artas01/artas01/main/pass"))()
 		game.CoreGui.OrdenHub:Destroy()
 	elseif game.PlaceId == 292439477 then
 		script.Parent.Parent.TextLabel.Text = "Phantom Forces"
