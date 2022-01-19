@@ -314,7 +314,7 @@ local function LOYP_fake_script() -- check.LocalScript
 	local key = script.Parent.Parent.key
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if key.Text == "Budsfimrofgsdu3" then -- Make the "Key" whatever you wish.
+		if key.Text == "fFGUfds74jfsd7F7vxc" then -- Make the "Key" whatever you wish.
 			script.Parent.Parent:TweenPosition(UDim2.new(0.383,0,-0.9,0), "Out", "Quad", 1, true)
 			script.Parent.Parent.Parent.Yaznal.Visible = true
 			wait(5)
